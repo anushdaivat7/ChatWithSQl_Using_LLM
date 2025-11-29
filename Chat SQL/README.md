@@ -1,4 +1,4 @@
-Streamlit)
+ChatWithSQL_using_LLM
 
 An AI-powered SQL Assistant that allows you to chat with your SQLite or MySQL database using natural language.
 Built using LangChain, Groq Llama 3.1 models, and Streamlit, the app automatically converts your query into SQL, executes it, and returns results — in real time.
