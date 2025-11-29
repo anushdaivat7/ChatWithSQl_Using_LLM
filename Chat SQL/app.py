@@ -28,7 +28,6 @@ if radio_opt.index(selected_opt)==1:
 else:
     db_uri=LOCALDB
 
-# --------------------------- FIX APPLIED ---------------------------
 api_key = st.sidebar.text_input("GROQ_API_KEY", type="password")
 
 if not api_key:
@@ -40,7 +39,6 @@ llm = ChatGroq(
     model_name="llama-3.1-8b-instant",
     streaming=True
 )
-# -------------------------------------------------------------------
 
 @st.cache_resource(ttl="2h")
 def configure_db(db_uri,mysql_host=None,mysql_user=None,mysql_password=None,mysql_db=None):
@@ -62,15 +60,13 @@ else:
 
 toolkit=SQLDatabaseToolkit(db=db,llm=llm)
 
-# --------------------------- IMPORTANT FIX -------------------------
 agent = create_sql_agent(
     llm=llm,
     toolkit=toolkit,
     verbose=True,
     agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-    handle_parsing_errors=True      # <--- FIX ADDED HERE
+    handle_parsing_errors=True     
 )
-# -------------------------------------------------------------------
 
 if "messages" not in st.session_state or st.sidebar.button("Clear message history"):
     st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
