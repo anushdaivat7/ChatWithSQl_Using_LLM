@@ -1,4 +1,4 @@
-**ChatWithSQl_Using_LLM**
+**ChatWithSQL_using_LLM**
 
 An AI-powered SQL Assistant that allows you to chat with your SQLite or MySQL database using natural language.
 Built using LangChain, Groq Llama 3.1 models, and Streamlit, the app automatically converts your query into SQL, executes it, and returns results — in real time.
@@ -58,7 +58,7 @@ streamlit run app.py
 
 The app will ask for GROQ_API_KEY in the left sidebar.
 
-🧠 How It Works
+**🧠 How It Works**
 
 User asks:
 “Show all students who scored above 80.”
@@ -76,7 +76,7 @@ Results returned back to user
 
 No SQL knowledge needed — the LLM handles everything.
 
-🗄️ Database Support
+**🗄️ Database Support**
 SQLite
 
 ✔ Built-in student.db
@@ -95,4 +95,3 @@ Password
 DB Name
 
 The agent automatically connects and queries.
-
