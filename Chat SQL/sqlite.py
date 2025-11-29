@@ -15,9 +15,9 @@ SECTION VARCHAR(25),MARKS INT)
 cursor.execute(table_info)
 
 ## Insert some more records
-cursor.execute('''Insert Into STUDENT values('Krish','Data Science','A',90)''')
-cursor.execute('''Insert Into STUDENT values('John','Data Science','B',100)''')
-cursor.execute('''Insert Into STUDENT values('Mukesh','Data Science','A',86)''')
+cursor.execute('''Insert Into STUDENT values('Anush','Data Science','A',90)''')
+cursor.execute('''Insert Into STUDENT values('OM','Data Science','B',100)''')
+cursor.execute('''Insert Into STUDENT values('QUEEN','Data Science','A',86)''')
 cursor.execute('''Insert Into STUDENT values('Jacob','DEVOPS','A',50)''')
 cursor.execute('''Insert Into STUDENT values('Dipesh','DEVOPS','A',35)''')
 
